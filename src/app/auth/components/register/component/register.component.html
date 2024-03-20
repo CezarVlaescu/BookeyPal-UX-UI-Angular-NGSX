@@ -1,0 +1,49 @@
+<form (submit)="onSubmit($event)">
+    <label for="username">
+        <input 
+        type="text" 
+        placeholder="Put your username"
+        name="username" 
+        [(ngModel)]="userRequestRegister.username"
+        required>
+    </label>
+    <label for="email"> <!--TO DO : directive to detect the right format of the email, for the request-->
+        <input 
+        type="email" 
+        placeholder="Email address"
+        name="email" 
+        [(ngModel)]="userRequestRegister.email"
+        required>
+    </label>
+    <label for="password"> 
+        <input 
+        type="password" 
+        placeholder="Password"
+        name="password" 
+        [(ngModel)]="userRequestRegister.password"
+        required>
+    </label>
+    <label for="password"> <!--TO DO : directive to detect if the passwords are identical *ngIF-->
+        <input 
+        type="password" 
+        placeholder="Confirm password" 
+        required>
+    </label>
+    <label for="firstname"> 
+        <input 
+        type="text" 
+        placeholder="Firstname" 
+        name="firstname"
+        [(ngModel)]="userRequestRegister.firstname"
+        required>
+    </label>
+    <label for="lastname"> 
+        <input 
+        type="text" 
+        placeholder="Lastname" 
+        name="lastname"
+        [(ngModel)]="userRequestRegister.lastname"
+        required>
+    </label>
+    <button type="submit">Register</button>
+</form>
